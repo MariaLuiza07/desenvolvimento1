@@ -48,7 +48,16 @@ public class MainTvs {
 		
 		tv002.desligarTV();
 		System.out.println(tv002);
-
+		
+       ModeloTV003 tv003 = new ModeloTV003();
+		
+		tv003.setLigada(true);
+		System.out.println(tv003);
+		
+		tv003.ligarTV();
+		
+		tv003.desligarTV();
+		System.out.println(tv003);
 	}
 
 }

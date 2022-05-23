@@ -66,7 +66,6 @@ public class TelevisaoHeranca {
 	public void setLigada(Boolean ligada) {
 		this.ligada = ligada;
 	}
-	
-	
 
+		
 }
