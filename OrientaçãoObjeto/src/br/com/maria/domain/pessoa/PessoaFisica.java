@@ -9,10 +9,6 @@ package br.com.maria.domain.pessoa;
  */
 public class PessoaFisica extends Pessoa {
 
-	public PessoaFisica() {
-		super();
-	}
-	
 	private String cpf;
 	
 	private String rg;
@@ -21,30 +17,73 @@ public class PessoaFisica extends Pessoa {
 	
 	private TipoPagamentoEnum tipo;
 	
-	public void PessoaFisica1() {
-		System.out.println(super.getNome() + ", " + 
-	    super.getCidade() + ", " + this.cpf);
+	public PessoaFisica() {
+		super();
+		//TODO Auto-generated constructor stub
 	}
 	
-	PessoaFisica pf = new PessoaFisica();
+	/**
+	 * @return the tipo
+	 */
+	public TipoPagamentoEnum getTipo() {
+		return tipo;
+	}
+	
+	/**
+	 * @param tipo the tipo to set
+	 */
+	public void setTipo(TipoPagamentoEnum tipo) {
+		this.tipo = tipo;
+	}
 
-	public void setCpf(String string) {
+	/**
+	 * @return the cpf
+	 */
+	public String getCpf() {
+		return cpf;
+	}
+
+	/**
+	 * @param cpf the cpf to set
+	 */
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	/**
+	 * @return the rg
+	 */
+	public String getRg() {
+		return rg;
+	}
+
+	/**
+	 * @param rg the rg to set
+	 */
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	/**
+	 * @return the reservista
+	 */
+	public Integer getReservista() {
+		return reservista;
+	}
+
+	/**
+	 * @param reservista the reservista to set
+	 */
+	public void setReservista(Integer reservista) {
+		this.reservista = reservista;
+	}
+
+	@Override
+	public void imprimir() {
 		// TODO Auto-generated method stub
 		
+		System.out.println(super.getNome() + ", " +
+		super.getEndereco().get(0).getCidade() + ", " + getCpf() + ", " + tipo);
 	}
-	
-	//Dados classe abstrata (Modelo)
-	pf.setNome("Maria");
-	pf.setEndereco("Rua Stephano Rudeck");
-	pf.setBairro("Jardim dos Bancarios");
-	pf.setCiade("Castro/PR");
-	pf.setPais("Brasil");
-	
-	//Dados especificos
-	pf.setCpf("13746605903");
-	pf.setRg("152720351");
-	pf.setReservista();
-	
-	pf.imprimir();
-	
+  	
 }
